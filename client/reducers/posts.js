@@ -4,8 +4,12 @@
 // 2. copy of current state
 
 function posts(state = [], action) {
-    console.log("the post will change");
-    console.log(state, action);
+    switch(action.type) {
+        case 'INCREMENT_LIKES' :
+            console.log("Incrementing Likes!!");
+        default:
+            return state;
+    }
     return state;
 }
 
